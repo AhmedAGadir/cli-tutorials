@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+// console.log("hello world, i'm martha");
+
+// to link martha run
+// sudo npm link 
+
+require("./index").writeHTML5public();
+
+// now you can run from anywhere e.g.
+// touch5 ahmed.html
