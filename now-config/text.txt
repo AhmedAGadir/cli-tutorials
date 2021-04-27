@@ -1,0 +1,8 @@
+Coding Garden youtube channel:
+title: "Build an Interactive CLI Tool with Node.js"
+
+
+inquirer.js, commander.js caporal yargs
+are useful tools for building command line tools
+
+for this tutorial we will ues inquirer.js
