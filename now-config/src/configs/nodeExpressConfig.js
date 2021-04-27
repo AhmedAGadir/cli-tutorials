@@ -17,7 +17,7 @@ async function nodeExpressConfig(config) {
     let mainFile = 'src/index.js'
     try {
         // eslint-disable-next-line
-        const packageJSON = require(path.join(process.cwd(), '/package.json'))
+        const packageJSON = require(path.join(process.cwd(), 'package.json'))
         mainFile = packageJSON.main;
         // eslint-disable-next-line
     } catch (error) {

@@ -1,20 +1,21 @@
 {
-  "name": "now-config",
-  "version": "1.0.0",
-  "description": "A CLI to help generate a now.sh configuration file",
-  "main": "src/path/thing/to/what.js",
-  "scripts": {
-    "lint": "eslint src/"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "inquirer": "^8.0.0"
-  },
-  "devDependencies": {
-    "eslint": "^7.25.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1"
-  }
+    "name": "now-config",
+    "version": "1.0.0",
+    "description": "A CLI to help generate a now.sh configuration file",
+    "main": "src/path/thing/to/what.js",
+    "scripts": {
+        "lint": "eslint src/",
+        "now-build": "npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "inquirer": "^8.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.25.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-plugin-import": "^2.22.1"
+    }
 }
