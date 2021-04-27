@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "description": "A CLI to help generate a now.sh configuration file",
     "main": "src/path/thing/to/what.js",
+    "bin": {
+        "now-config": "src/index.js"
+    },
     "scripts": {
         "lint": "eslint src/",
         "now-build": "yarn run build"
