@@ -7,7 +7,38 @@ are useful tools for building command line tools
 
 for this tutorial we will ues inquirer.js
 
+=================================
+=================================
 
 to run linter:
 npm run lint
 npm run lint -- --fix
+
+=================================
+=================================
+
+to make it runnable from anywhere
+
+add the following to package.json:
+
+"bin": {
+    "now-config": "src/index.js"
+},
+
+then run:
+npm link 
+
+and add the following to the top of src/index.js:
+#!/usr/bin/env node
+
+=================================
+=================================
+
+now you can run now-config from anywhere:
+
+make a directory "foo"
+run npx now-config 
+see what happens
+
+
+
