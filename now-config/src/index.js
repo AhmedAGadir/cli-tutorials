@@ -1,9 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
-const nodeExpress = require('./configs/nodeExpress');
-
 const existingConfig = fs.existsSync('now.json');
+
+const nodeExpressConfig = require('./configs/nodeExpressConfig');
+const staticConfig = require('./configs/staticConfig');
+const reactConfig = require('./configs/reactConfig');
+
+
 
 async function buildConfig() {
     let config = {
@@ -29,7 +33,15 @@ async function buildConfig() {
     config.name = answers.name;
     switch (answers.type) {
         case 'node-express':
-            config = await nodeExpress(config);
+            config = await nodeExpressConfig(config);
+            break;
+        case 'static':
+            config = await staticConfig(config);
+            break;
+        case 'react':
+            config = await reactConfig(config);
+            break;
+        default:
             break;
     }
     console.log(config);

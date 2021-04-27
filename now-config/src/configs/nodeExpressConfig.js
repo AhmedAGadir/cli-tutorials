@@ -1,3 +1,4 @@
+const path = require('path');
 const inquirer = require('inquirer');
 
 const baseConfig = {
@@ -12,11 +13,11 @@ const baseConfig = {
     ],
 };
 
-async function nodeExpress(config) {
+async function nodeExpressConfig(config) {
     let mainFile = 'src/index.js'
     try {
         // eslint-disable-next-line
-        const packageJSON = require(process.cwd() + '/package.json')
+        const packageJSON = require(path.join(process.cwd(), '/package.json'))
         mainFile = packageJSON.main;
         // eslint-disable-next-line
     } catch (error) {
@@ -32,11 +33,14 @@ async function nodeExpress(config) {
                 default: mainFile,
             },
         ]);
-    console.log('answers')
+
+    baseConfig.builds[0].src = answers.name;
+    baseConfig.routes[0].destination = answers.name;
+
     return {
         ...config,
         ...baseConfig
     };
 }
 
-module.exports = nodeExpress;
+module.exports = nodeExpressConfig;
