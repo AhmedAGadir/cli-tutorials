@@ -5,7 +5,7 @@
     "main": "src/path/thing/to/what.js",
     "scripts": {
         "lint": "eslint src/",
-        "now-build": "npm run build"
+        "now-build": "yarn run build"
     },
     "keywords": [],
     "author": "",

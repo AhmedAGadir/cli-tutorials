@@ -5,7 +5,7 @@ const existingConfig = fs.existsSync('now.json');
 
 const nodeExpressConfig = require('./configs/nodeExpressConfig');
 const staticConfig = require('./configs/staticConfig');
-const reactConfig = require('./configs/reactConfig');
+const frontEndFrameworkConfig = require('./configs/frontEndFrameworkConfig');
 
 
 
@@ -26,7 +26,7 @@ async function buildConfig() {
                 type: 'list',
                 name: 'type',
                 message: 'What type of project?',
-                choices: ['node-express', 'static', 'react', 'vue', 'static-build', 'lambda'],
+                choices: ['node-express', 'static', 'react', 'vue', 'static-build'],
             },
         ])
 
@@ -39,7 +39,13 @@ async function buildConfig() {
             config = await staticConfig(config);
             break;
         case 'react':
-            config = await reactConfig(config);
+            config = await frontEndFrameworkConfig(config, 'build');
+            break;
+        case 'vue':
+            config = await frontEndFrameworkConfig(config, 'dist');
+            break;
+        case 'static-build':
+            config = await frontEndFrameworkConfig(config, 'dist');
             break;
         default:
             break;

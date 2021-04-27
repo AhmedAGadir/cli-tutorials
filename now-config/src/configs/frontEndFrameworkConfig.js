@@ -16,14 +16,14 @@ const baseConfig = {
     ],
 };
 
-async function reactConfig(config) {
+async function reactConfig(config, defaultBuild = 'dist') {
     const answers = await inquirer
         .prompt([
             {
                 type: 'text',
                 name: 'directory',
                 message: 'What is the build directory?',
-                default: 'build',
+                default: defaultBuild,
             },
             {
                 type: 'confirm',
