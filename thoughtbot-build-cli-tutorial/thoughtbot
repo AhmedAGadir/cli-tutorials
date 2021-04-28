@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+
+# this file was originally named script.sh and did not contain the shabang ^
+# echo 'hello world'
+
+# can run with:
+# sh script.sh
+
+# to get executable permissions
+# chmod +x script.sh
+
+# now we can run with:
+# ./script.sh
+
+# if we want to run this in python, ruby, node, bash etc
+#  then we need to specify this in a shabang
+
+# note that the file extension doesn't matter as much as the shabang
+# weve changed the file extension from script.sh to script.rb
+
+# and now weve even changed it to just script (no extension);
+
+puts 'hello world'
+
+# to put our executable script on our path
+# the path is a list of directories that the shell looks in to find executables 
+# when it doesn't know where they are
+# to see it run: echo $PATH
+
+# to copy it to a place we can read run:
+# sudo cp /path/to/file /usr/local/bin
+
+# pwd to see path to file
+
+# to open it to view
+# Open Finder.
+# Press Command+Shift+G. A dialog box opens.
+# Enter the path to the folder you want to access, for example /usr/discreet/.
