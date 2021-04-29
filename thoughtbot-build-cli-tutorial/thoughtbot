@@ -1,28 +1,28 @@
 #!/usr/bin/env ruby
 
-# this file was originally named script.sh and did not contain the shabang ^
+# this file was originally named thoughtbot.sh and did not contain the shabang ^
 # echo 'hello world'
 
 # can run with:
-# sh script.sh
+# sh thoughtbot.sh
 
 # to get executable permissions
-# chmod +x script.sh
+# chmod +x thoughtbot.sh
 
 # now we can run with:
-# ./script.sh
+# ./thoughtbot.sh
 
 # if we want to run this in python, ruby, node, bash etc
 #  then we need to specify this in a shabang
-
 # note that the file extension doesn't matter as much as the shabang
-# weve changed the file extension from script.sh to script.rb
+# weve changed the file extension from thoughtbot.sh to thoughtbot.rb 
+# and included a shabang in this file
 
-# and now weve even changed it to just script (no extension);
+# and now weve even changed it to just thoughtbot (no extension);
 
 puts 'hello world'
 
-# to put our executable script on our path
+# to put our executable thoughtbot on our path
 # the path is a list of directories that the shell looks in to find executables 
 # when it doesn't know where they are
 # to see it run: echo $PATH
@@ -36,3 +36,9 @@ puts 'hello world'
 # Open Finder.
 # Press Command+Shift+G. A dialog box opens.
 # Enter the path to the folder you want to access, for example /usr/discreet/.
+
+# if you want to exit a file and indicate a failurue 
+# exit 1 
+# (or any other number)
+# if you want to exit a script without indicating a filure
+exit 0
