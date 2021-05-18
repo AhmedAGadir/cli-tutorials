@@ -1,0 +1,25 @@
+used gsed instead of sed
+
+cat employee_info.txt
+to print
+
+gsed [options] 'commands' file_to_work_with_sed
+
+gsed -i '1i S_NO Name Salary' employee_info.txt
+gsed -i '1a ----------------' employee_info.txt
+
+-i before line 
+-a after line 
+-d delete line 
+
+can use $ to refer to last line
+gsed -i '$a ----------------' employee_info.txt
+
+to inset a new line before a certain line
+gsed -i '/Ahmed/i Mounika 4600' employee_info.txt
+
+and to insert one after a certain line
+gsed -i '/Ahmed/a Abs 5700' employee_info.txt
+
+to delete a line
+gsed -i '3d' employee_info.txt 

@@ -1,0 +1,10 @@
+S_NO Name Salary
+----------------
+Davis 9000
+Louis 8000
+Shuheb 7000
+Bam 6000
+Mounika 4600
+Ahmed 5000
+Abs 5700
+----------------
